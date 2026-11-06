@@ -1,0 +1,53 @@
+DSA03 NLP Assignment 3 - Helpdesk Parser
+-------------------------------------------------------
+Grammar phrase-structure rules: 41
+Lexicon entries: 129
+Test sentences: 30
+\nSentence test results (Earley recognizer):
+CHECK | expected=True  found=False | The student submits the form.
+PASS | expected=True  found=True  | The students submit the forms.
+CHECK | expected=True  found=False | Show the students with the late fee notice.
+PASS | expected=True  found=True  | Book the room near the library for the seminar.
+PASS | expected=True  found=True  | Can you check the timetable?
+CHECK | expected=True  found=False | Where is the library?
+CHECK | expected=True  found=False | When will the exams be held?
+PASS | expected=True  found=True  | Submit the assignment.
+CHECK | expected=True  found=False | Send me the receipt.
+CHECK | expected=True  found=False | Tell me the fee is paid.
+PASS | expected=True  found=True  | The portal crashed.
+CHECK | expected=True  found=False | Apply for a hostel room.
+CHECK | expected=True  found=False | The late fee notice is available.
+CHECK | expected=True  found=False | My exam result is online.
+CHECK | expected=True  found=False | The students and staff need the timetable.
+CHECK | expected=True  found=False | The hostel charges are due.
+CHECK | expected=True  found=False | Who can access the portal?
+CHECK | expected=True  found=False | Does the student need a room?
+CHECK | expected=True  found=False | Show me the placement notice.
+CHECK | expected=True  found=False | The exams that were postponed will be held tomorrow.
+CHECK | expected=True  found=False | The library is near the hostel.
+CHECK | expected=True  found=False | Pay the current fee today.
+CHECK | expected=True  found=False | The student checks the result.
+PASS | expected=True  found=True  | We need the room for the seminar.
+CHECK | expected=True  found=False | The form is available online.
+PASS | expected=False found=False | The students submits the form.
+CHECK | expected=False found=True  | The student submit the forms.
+PASS | expected=False found=False | Me checks the timetable.
+PASS | expected=False found=False | The portal crashed the form.
+PASS | expected=False found=False | Submit.
+\nIllustrative PCFG PP attachment:
+NP attachment score = 0.008250
+VP attachment score = 0.045375
+Preferred attachment: VP (higher score)
+\nNote: the controlled grammar is an educational fragment, not a production parser.
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
