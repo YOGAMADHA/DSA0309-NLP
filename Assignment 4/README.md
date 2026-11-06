@@ -21,17 +21,7 @@
 - `screenshots/assignment4_output.png` – sample program output screenshot.
 - `requirements.txt` – no third-party dependencies.
 
-## GitHub upload
-Create a new GitHub repository, then run these commands in this folder:
-```bash
-git init
-git add .
-git commit -m "Add NLP Assignment 4 semantic analysis project"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-git push -u origin main
-```
-Replace the remote URL with your own repository URL.
+
 
 ## Important academic note
 This is an optional, transparent, rule-based demonstration. It is not a production NLP
