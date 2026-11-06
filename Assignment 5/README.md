@@ -16,5 +16,3 @@ No external packages are required.
 ## Important scope note
 This is a transparent educational prototype, not a full NLP parser. It uses a small hand-written entity lexicon for the supplied lab incident report and simple rules for dialogue acts. It does not claim measured BLEU/chrF scores, production-grade coreference, neural machine translation, or universal discourse parsing. For B1–B4, the report gives reproducible toy experiments and explicitly labels synthetic operation/quality estimates as such. Replace the toy gold annotation and add a labelled corpus before claiming real-world accuracy.
 
-## GitHub upload
-Create a repository, extract this ZIP, then upload the files/folders (`src`, `tests`, `outputs`, `screenshots`, `README.md`, `requirements.txt`).
