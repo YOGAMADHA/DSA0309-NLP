@@ -1,4 +1,4 @@
-DSA03 NLP Assignment-2 package
+DSA0309 NLP Assignment-2 
 ================================
 1. Run: python code/run_assignment.py
 2. The script uses only Python standard-library modules and a fixed random seed (42).
