@@ -79,7 +79,6 @@ FST coverage vs lexicon size (alphabetic corpus tokens with an analysis):
 
 Runtime on the machine that produced these files (sandbox, **not** your laptop): {'entity_recognition': 0.1006, 'normalisation': 0.056, 'tokenisation': 0.0822, 'fst_analysis': 0.1844, 'total_wall': 0.4293}. Re-run on your own Windows 11 machine and record hardware before submitting.
 
-## Read this before submitting – honest limitations
 
 1. **The corpus is synthetic and generated from templates, and the gold labels come from the same generator.**
    Entity F1 ≈ 1.0 and retrieval F1 = 1.0 for the FST therefore show the code works, **not** how it would perform on real
@@ -102,14 +101,3 @@ Runtime on the machine that produced these files (sandbox, **not** your laptop):
 7. Abbreviation expansions (especially OD/BD/SOS and the ambiguous `MS`) need review by a clinical subject expert.
 8. The pumping-lemma test only illustrates the argument for p = 5; the proof itself is in the report.
 
-## Publishing to GitHub
-
-```bash
-git init
-git add .
-git commit -m "DSA03 NLP Assignment 1 - hospital record normalisation and search"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<repo-name>.git
-git push -u origin main
-```
-(Or create an empty repo on github.com and use *Add file → Upload files* with the unzipped contents.)
