@@ -1,0 +1,31 @@
+ASSIGNMENT 5 – CO5 | DISCOURSE ANALYSER
+=======================================================
+Sentences/units: 6 | Tokens: 61
+
+Discourse units:
+  U1: The department bought a new server for the lab last month.
+  U2: It replaced an old machine that had failed twice.
+  U3: Ravi configured the server with the lab's toolchain.
+  U4: He then installed the compiler suite on it.
+  U5: The suite crashed when the memory filled during a build.
+  U6: Ravi reported the fault to the vendor, and the vendor replaced a faulty module.
+
+Pronoun resolution trace:
+  S2 'It': candidates=[('department', 9), ('server_1', 5)] => server_1 (resolved)
+  S4 'He': candidates=[('Ravi', 9)] => Ravi (resolved)
+  S4 'it': candidates=[('server_1', 7), ('department', 6), ('toolchain', 5), ('old_machine', 4)] => server_1 (resolved)
+
+Dialogue act demo:
+  U1: OTHER | I need to renew three books.
+  A1: ACCEPT | Certainly. Could you give me my library ID?
+  U2: INFORM | It is 2024CS118.
+  A2: QUESTION | Thank you. They are due on Friday. Would you like a two-week renewal?
+  U3: ACCEPT | Yes please. Can you also check whether the NLP book is available?
+  A3: INFORM | It is on the shelf, and I have reserved it for you until tomorrow.
+  U4: INFORM | That is helpful. Thank you.
+
+Measurement example (gold=4; X: 3 correct/5 proposed; Y: 3 correct/3 proposed):
+  X: P=0.600, R=0.750, F1=0.667
+  Y: P=1.000, R=0.750, F1=0.857
+
+Note: educational rule-based prototype; inspect README for scope and tests.
