@@ -1,0 +1,201 @@
+{
+  "corpus": {
+    "records": 500,
+    "tokens": 36968,
+    "by_type": {
+      "discharge_summary": 150,
+      "prescription": 125,
+      "operation_note": 125,
+      "nursing_observation": 100
+    }
+  },
+  "lexicon": {
+    "stems_incl_roots": 431,
+    "inflectional_affixes": 24,
+    "derivational_affixes": 23,
+    "irregular_verbs": 26,
+    "irregular_plurals": 13,
+    "surface_forms": 1018
+  },
+  "timing_seconds": {
+    "entity_recognition": 0.1006,
+    "normalisation": 0.056,
+    "tokenisation": 0.0822,
+    "fst_analysis": 0.1844,
+    "total_wall": 0.4293
+  },
+  "entity_eval": {
+    "patient_id": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "TP": 500,
+      "FP": 0,
+      "FN": 0
+    },
+    "date": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "TP": 550,
+      "FP": 0,
+      "FN": 0
+    },
+    "blood_pressure": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "TP": 375,
+      "FP": 0,
+      "FN": 0
+    },
+    "lab_value": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "TP": 250,
+      "FP": 0,
+      "FN": 0
+    },
+    "temperature": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "TP": 250,
+      "FP": 0,
+      "FN": 0
+    },
+    "drug_strength": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "TP": 655,
+      "FP": 0,
+      "FN": 0
+    },
+    "ward_bed": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "TP": 250,
+      "FP": 0,
+      "FN": 0
+    },
+    "contact": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "TP": 150,
+      "FP": 0,
+      "FN": 0
+    },
+    "age": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "TP": 150,
+      "FP": 0,
+      "FN": 0
+    },
+    "frequency": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "TP": 655,
+      "FP": 0,
+      "FN": 0
+    },
+    "icd_code": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "TP": 275,
+      "FP": 0,
+      "FN": 0
+    },
+    "duration": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "TP": 755,
+      "FP": 0,
+      "FN": 0
+    }
+  },
+  "stemming_vs_lemmatisation": {
+    "forms": 200,
+    "agreement": 0.52,
+    "over_stemming_stem_classes": 0.0361,
+    "under_stemming_lemma_classes": 0.1955,
+    "type_to_lemma_ratio_lexicon": 2.52
+  },
+  "retrieval": {
+    "none": {
+      "precision": 1.0,
+      "recall": 0.4029,
+      "f1": 0.5744,
+      "TP": 2027,
+      "FP": 0,
+      "FN": 3004
+    },
+    "porter": {
+      "precision": 1.0,
+      "recall": 0.9147,
+      "f1": 0.9555,
+      "TP": 4602,
+      "FP": 0,
+      "FN": 429
+    },
+    "fst": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "TP": 5031,
+      "FP": 0,
+      "FN": 0
+    },
+    "n_queries": 40
+  },
+  "noise_study": {
+    "macro_entity_clean": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "macro_entity_noisy_raw": {
+      "precision": 0.9531,
+      "recall": 0.8695,
+      "f1": 0.9064
+    },
+    "macro_entity_noisy_after_cleanup": {
+      "precision": 0.9747,
+      "recall": 0.9314,
+      "f1": 0.9513
+    },
+    "fst_coverage_clean": 0.4848,
+    "fst_coverage_noisy_raw": 0.4582,
+    "fst_coverage_noisy_after_cleanup": 0.4803
+  },
+  "coverage_by_lexicon_size": [
+    [
+      50,
+      7.58
+    ],
+    [
+      100,
+      12.81
+    ],
+    [
+      200,
+      23.96
+    ],
+    [
+      300,
+      34.52
+    ],
+    [
+      400,
+      45.4
+    ]
+  ]
+}
