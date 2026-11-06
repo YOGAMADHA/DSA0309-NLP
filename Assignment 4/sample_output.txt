@@ -1,0 +1,60 @@
+========================================================================
+DSA03 NLP ASSIGNMENT 4 - SEMANTIC SYSTEMS DEMONSTRATION
+========================================================================
+
+TASK 1 - EVENT / ROLE REPRESENTATION
+Input: Leena sent the report to Arun after the meeting.
+Frame: {'event': 'SEND', 'agent': 'Leena', 'theme': 'the report', 'recipient': 'Arun', 'time_relation': 'after the meeting'}
+Graph relations:
+  Leena --AGENT_OF --SEND
+  the report --THEME_OF --SEND
+  Arun --RECIPIENT_OF --SEND
+  SEND --OCCURS_AFTER --meeting
+
+TASK 2 - FINITE KNOWLEDGE BASE
+Facts stored: 8
+Rule: If Enrolled(x,c) and Course(c), then Learner(x) is eligible for course processing.
+Query: ('Completed', 'Asha', 'NLP') => TRUE (fact found)
+
+TASK 3 - PREPOSITIONAL ATTACHMENT
+Input: The analyst noticed the student with the camera near the library.
+Reading 1: 'with the camera' attaches to 'student'
+ Meaning: The student has/is carrying the camera.
+ Representation: NOTICE(analyst, student); HAS(student, camera); NEAR(student, library)
+Reading 2: 'with the camera' attaches to 'noticed'
+ Meaning: The analyst used the camera while noticing the student.
+ Representation: NOTICE(analyst, student); INSTRUMENT(NOTICE, camera); NEAR(student, library)
+
+TASK 4 - RULE-BASED WORD SENSE DISAMBIGUATION
+Input: Turn on the light.
+ Selected: noun_illumination | scores: {'noun_illumination': 2, 'adjective_low_weight': 0, 'adjective_small_meal': 0} | evidence: ['light', 'turn'] | expected: noun_illumination
+Input: This bag is light.
+ Selected: UNCERTAIN | scores: {'noun_illumination': 1, 'adjective_low_weight': 1, 'adjective_small_meal': 0} | evidence: [] | expected: adjective_low_weight
+Input: The light meal was served early.
+ Selected: UNCERTAIN | scores: {'noun_illumination': 1, 'adjective_low_weight': 0, 'adjective_small_meal': 1} | evidence: [] | expected: adjective_small_meal
+Input: The backpack is light to carry.
+ Selected: UNCERTAIN | scores: {'noun_illumination': 1, 'adjective_low_weight': 1, 'adjective_small_meal': 0} | evidence: [] | expected: adjective_low_weight
+
+TASK 5 - SEMANTIC INFORMATION RETRIEVAL
+Query: How can a system identify the intended meaning of a word in context?
+Rank  ID   Lexical  Semantic  Final  Label
+   1  D1   0.583    1.000     0.833  Relevant
+   2  D3   0.250    0.333     0.300  Relevant
+   3  D5   0.083    0.167     0.133  Relevant
+   4  D2   0.167    0.000     0.067  Distractor
+   5  D6   0.167    0.000     0.067  Distractor
+   6  D4   0.083    0.000     0.033  Distractor
+
+TASK 6 - INTEGRATED AMBIGUITY
+Input: I watched the crane by the bank, then it moved.
+Candidate 1: crane=bird, bank=river_edge
+ Meaning: A bird was near a river bank and then moved.
+ Representation: WATCH(speaker, crane_bird); LOCATED_NEAR(crane_bird, river_bank); MOVED(crane_bird)
+Candidate 2: crane=machine, bank=financial
+ Meaning: A construction crane was near a financial bank/building and then moved.
+ Representation: WATCH(speaker, crane_machine); LOCATED_NEAR(crane_machine, bank_building); MOVED(crane_machine)
+
+LIMITATION: This is a small rule-based teaching demo. It does not use a
+trained parser, neural language model, or live document index.
+Use the written report to explain assumptions, ambiguity and evaluation.
+========================================================================
